@@ -1,0 +1,24 @@
+# Core data processing and database connectivity
+pandas>=1.5.0
+sqlalchemy>=1.4.0
+pymysql>=1.0.0
+
+# AWS S3 integration
+boto3>=1.26.0
+botocore>=1.29.0
+
+# Parquet file format support
+pyarrow>=10.0.0
+
+# Progress bars for Jupyter notebooks
+tqdm>=4.64.0
+
+# Additional useful packages for data analysis
+numpy>=1.24.0
+python-dateutil>=2.8.0
+
+# Optional: for better JSON handling in configurations
+jsonschema>=4.0.0
+
+# Optional: for environment variable management
+python-dotenv>=0.19.0
