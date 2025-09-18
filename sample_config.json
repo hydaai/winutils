@@ -1,0 +1,42 @@
+{
+  "mysql": {
+    "host": "your-mysql-host.example.com",
+    "port": 3306,
+    "database": "your_database_name",
+    "username": "your_mysql_username",
+    "password": "your_mysql_password",
+    "ssl_ca": "/path/to/ca-cert.pem",
+    "ssl_cert": "/path/to/client-cert.pem", 
+    "ssl_key": "/path/to/client-key.pem"
+  },
+  "s3": {
+    "bucket": "your-s3-bucket-name",
+    "region": "us-west-2",
+    "source_alias": "mysql_prod",
+    "access_key_id": "your_aws_access_key_id",
+    "secret_access_key": "your_aws_secret_access_key"
+  },
+  "tables": [
+    {
+      "name": "users",
+      "batch_size": 10000,
+      "job_date": "2024-01-15"
+    },
+    {
+      "name": "orders", 
+      "batch_size": 5000
+    },
+    {
+      "name": "products",
+      "batch_size": 1000
+    },
+    {
+      "name": "customers",
+      "batch_size": 8000,
+      "job_date": "2024-01-16"
+    }
+  ],
+  "logging": {
+    "log_dir": "./logs"
+  }
+}

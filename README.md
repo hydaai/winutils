@@ -168,3 +168,39 @@ gpg --armor --detach-sign hadoop-2.8.0.zip
 1. Tag the release with the hadoop version, include the commit checksum used to build off
 1. Drop in the .zip and .zip.asc files as binary artifacts
 
+## Additional Tools
+
+### MySQL to S3 Data Ingestion Script
+
+This repository now includes a comprehensive Python script for data ingestion from MySQL databases to S3 buckets, specifically designed for Jupyter Notebook environments.
+
+**Key Features:**
+- ✅ Pure Python implementation (no Spark required)
+- ✅ MySQL database connectivity using SQLAlchemy and PyMySQL
+- ✅ S3 integration with automatic Parquet conversion
+- ✅ Multiple table support with configurable batch processing
+- ✅ Jupyter Notebook optimized with progress bars
+- ✅ Comprehensive error handling and logging
+- ✅ JSON-based configuration management
+
+**Files:**
+- `mysql_to_s3_ingestion.py` - Main ingestion script
+- `mysql_to_s3_example.ipynb` - Jupyter Notebook example
+- `sample_config.json` - Configuration template
+- `requirements.txt` - Python dependencies
+- `README_MYSQL_S3_INGESTION.md` - Detailed documentation
+
+**Quick Start:**
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Create sample configuration
+python mysql_to_s3_ingestion.py --create-sample-config
+
+# Run ingestion (after updating config with your credentials)
+python mysql_to_s3_ingestion.py --config your_config.json
+```
+
+For detailed usage instructions, see [README_MYSQL_S3_INGESTION.md](README_MYSQL_S3_INGESTION.md).
+
